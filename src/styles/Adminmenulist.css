@@ -1,0 +1,204 @@
+*{
+    font-family: poppins,sans-serif;
+}
+
+.admin-menu-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.admin-menu-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-menu-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e23744;
+  position: relative;
+  right: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-menu-subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-grid input,
+.form-grid textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-grid textarea {
+  resize: none;
+  height: 80px;
+}
+.form-grid textarea:focus,
+.form-grid input:focus {
+  border-color: #e23744;
+}
+.file-drop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px dashed #e23744;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.upload-btn {
+  background: #e23744;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.upload-btn:disabled {
+  background: #ccc;
+}
+
+.preview-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.pre-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: auto;
+  width: auto;
+}
+.preview-img {   /* Keep it inside card */
+  width: 250px;
+  height: 200px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translate(530px, 480px);
+}
+.pre-img{
+  height: 200px;
+}
+/* .pre-im-no{
+  height: 200px;
+} */
+.ratings{
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-top: 6px;
+  margin-left: 50rem;
+  height: 100px;
+  width: 400px; 
+  transform: translate(-40px, -50px );
+}
+.rating-display{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.dinning-ratings{
+  position: relative;
+  left: 4.5rem;
+  bottom: 2.5rem;
+ }
+.t{
+  position: relative;
+  bottom: 19.5rem;
+  left: 5rem;
+ }
+.dinning-ratings1{ 
+  position: relative;
+  left: 5rem;
+  bottom: 0.8rem;
+}
+
+/* Admin action buttons inside each menu item card */
+.order-items {
+  position: relative;
+}
+
+.admin-buttons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+}
+
+.edit-btn-menu,
+.delete-btn-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.edit-btn-menu {
+  background: linear-gradient(135deg, #00c853, #00e676);
+  color: #fff;
+}
+.edit-btn-menu:hover {
+  background: linear-gradient(135deg, #00e676, #00c853);
+  transform: translateY(-2px) scale(1.04);
+}
+.edit-btn-menu:active {
+  transform: scale(0.96);
+}
+
+.delete-btn-menu {
+  background: linear-gradient(135deg, #ff1744, #d50000);
+  color: #fff;
+}
+.delete-btn-menu:hover {
+  background: linear-gradient(135deg, #ff5252, #ff1744);
+  transform: translateY(-2px) scale(1.04);
+}
+.delete-btn-menu:active {
+  transform: scale(0.96);
+}
+
+.admin-buttons{
+  margin-right: 10rem;
+}
+.edit-btn-menu{
+  margin-right: 20px;
+}
+.edit-btn-menu,.delete-btn-menu{
+  font-size: 15.5px;
+}

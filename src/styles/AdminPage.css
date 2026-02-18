@@ -1,0 +1,112 @@
+/* AdminPage.css */
+
+.admin-container {
+  min-height: 420px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0.1, 0.2, 0.3);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 980px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.admin-res-subtitle{
+  text-align: center;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.upload-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.food-input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
+  max-width: 500px;
+}
+
+.food-input:focus {
+  border-color: #4cafef;
+  box-shadow: 0 0 5px rgba(76, 175, 239, 0.3);
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #f4f6f9;
+  border: 2px dashed #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #555;
+  transition: all 0.2s ease-in-out;
+}
+
+.file-label:hover {
+  border-color: #4cafef;
+  color: #333;
+}
+
+.upload-btn {
+  padding: 12px;
+  background: #4cafef;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.upload-btn:hover {
+  background: #379ad7;
+}
+
+.upload-btn:disabled {
+  background: #9ecdea;
+  cursor: not-allowed;
+}
+
+.preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.preview h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.preview-img {
+  max-width: 200px;  /* Adjust as needed */
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px auto 0 auto;
+}

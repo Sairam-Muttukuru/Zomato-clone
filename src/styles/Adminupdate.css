@@ -1,0 +1,98 @@
+/* Adminupdate.css */
+.admin-update-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header */
+.admin-update-container h2 {
+  text-align: center;
+  background: #e23744; /* Zomato red */
+  color: #fff;
+  font-size: 1.9rem;
+  font-weight: 600;
+  padding: 18px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Form */
+.admin-update-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 25px 30px;
+}
+
+.admin-update-form input[type="text"],
+.admin-update-form input[type="number"],
+.admin-update-form input[type="file"] {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.25s ease-in-out;
+  background: #fafafa;
+}
+
+.admin-update-form input:hover {
+  background: #fff;
+  border-color: #e23744;
+}
+
+.admin-update-form input:focus {
+  border-color: #e23744;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(226, 55, 68, 0.15);
+}
+
+/* Preview image */
+.preview-image {
+  grid-column: span 2;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 12px;
+  max-height: 150px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Button */
+.admin-update-form button {
+  grid-column: span 2;
+  margin-top: 15px;
+  padding: 14px;
+  background: linear-gradient(135deg, #e23744, #b22234);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.admin-update-form button:hover {
+  background: linear-gradient(135deg, #b22234, #7c1620);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 6px 16px rgba(226, 55, 68, 0.25);
+}
+
+.admin-update-form button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,263 @@
+.restaurant-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 10rem;
+    left: 5rem;
+    margin-right: 10rem;
+}
+.restaurant-heading {
+  font-family: 'Poppins', sans-serif; /* Try also Montserrat or Pacifico */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e23744;  /* Zomato Red */
+  margin: 2rem 0 1rem 0;
+  text-align: left;
+  position: relative;
+  bottom: 170px;
+  left: 80px;
+  transform: translate(-20px,10px);
+}
+
+.restaurant-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e23744;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.res{
+    margin-bottom: 20px;
+    font-family: poppins,sans-serif;
+    font-size: 30px;
+    position: relative;
+    bottom: 8rem;
+    left: 6rem;
+}
+.end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-family: poppins,sans-serif;
+    font-size: 30px;
+    margin-bottom: 20rem;
+    position: relative;
+    right: 5rem;
+}
+
+.end-home{
+     width: 150px;
+  height: auto;
+  margin-left: 10px;
+}
+.img-div{
+    position: relative;
+    bottom: 100px;
+    right: 50px;
+    /* width: 300px;
+    height: 300px; */
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+body{
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.cards-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
+  position: relative;
+  bottom: 80px;
+  padding: 20px;
+  color: black;
+  /* background: whitesmoke; */
+  background: transparent;
+  width: auto;
+  border-radius: 20px;
+  height: 300px;
+  overflow-x:scroll;
+  margin-bottom: 2rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.cards-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  
+}
+.scroll-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn.left {
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  left: 10px;
+  position: relative;
+  top: 12rem;
+  
+}
+.scroll-btn.right {
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  right: 10px;
+  position: relative;
+  left: 89rem;
+  top: 5rem;
+  /* transform: translateY(200%); */
+}
+.insp {
+  position: relative;
+  left:8rem;
+  bottom: 1.5rem;
+  font-family: Poppins, sans-serif;
+  font-size: 35px;
+  top: 1rem;
+  color: black;
+}
+.lo-pg{
+  display: block;
+  z-index: 3;
+}
+.foodlist-title{
+  position: relative;
+  left: 150px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  bottom: 2rem;
+  color:  #e23744;
+  transform: translate(-100px,2px);
+}
+.foodlist-title img{
+  width: 90px;
+  height: 90px;
+  position: relative;
+  transform: translate(-80px,7px);
+  margin-right: 10px;
+}
+.explore-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.explore-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #e23744;
+  margin-bottom: 8px;
+  margin-left: 70px;
+}
+
+.explore-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.explore-card {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-10px);
+}
+
+.explore-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.explore-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.explore-card:hover .explore-img img {
+  transform: scale(1.15);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.explore-card:hover .overlay {
+  opacity: 1;
+}
+
+.explore-name {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+.explore-name:hover {
+  color: #e23744;
+}
+.explore-subtitle:hover {
+  color: #e23744;
+}
+.explore-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-top: 6px;
+}

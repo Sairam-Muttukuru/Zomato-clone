@@ -1,0 +1,142 @@
+*{
+    font-family: poppins,sans-serif;
+}
+.admin-menu-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin-top: 3.5rem;
+  margin-bottom: 5rem;
+}
+
+.admin-menu-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.home-para1{
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 2rem;
+  left: 6rem;
+}
+.admin-menu-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e23744;
+  position: relative;
+  right: 10px;
+  margin-bottom: 20px;
+}
+
+.admin-menu-subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-grid input,
+.form-grid textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-grid textarea {
+  resize: none;
+  height: 80px;
+}
+.form-grid textarea:focus,
+.form-grid input:focus {
+  border-color: #e23744;
+}
+.file-drop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px dashed #e23744;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.upload-btn {
+  background: #e23744;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.upload-btn:disabled {
+  background: #ccc;
+}
+
+/* .preview-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+} */
+/* .pre-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: auto;
+  width: auto;
+}
+.preview-img {   /* Keep it inside card */
+  /* width: 250px;
+  height: 200px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translate(530px, 440px);
+}
+.pre-img{
+  height: 200px;
+  width: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  transform: translateY(20px);
+} */
+/* .pre-im-no{
+  height: 200px;
+} */ 
+ /* Wrap for preview */
+.preview-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Image itself */
+.preview-img {
+  width: 250px;
+  height: 200px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* position: relative; */
+  position: absolute;
+  bottom: 2rem;
+  left: 7rem;
+  top: 24rem;
+}
+

@@ -1,0 +1,128 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: linear-gradient(to right, #fff5f5, #ffeaea); */
+  font-family: Arial, sans-serif;
+}
+
+.auth-box {
+  background: #fff;
+  padding: 30px;
+  width: 380px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border: 1px solid #eee;
+  position: relative;
+  bottom: 2.5rem;
+}
+
+.auth-box h2 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #e23744;
+  font-weight: bold;
+}
+
+/* Profile Picture */
+.profile-pic {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+  right: 6.5rem;
+  top: -1.5rem;
+}
+
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e23744;
+}
+
+.profile-pic input {
+  display: none;
+}
+
+.camera-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: #e23744;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-icon:hover {
+  background: #c82f3a;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 15px;
+}
+body{
+    background-color: white;
+}
+.input-group input {
+  width: 90%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+  position: relative;
+  left: 0.1rem;
+  border-radius: 10px;
+}
+
+.input-group input:focus {
+  border: 2px solid #e23744;
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: #e23744;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.auth-btn:hover {
+  background: #c82f3a;
+}
+
+/* Toggle */
+.auth-toggle {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-toggle span {
+  color: #e23744;
+  cursor: pointer;
+  font-weight: bold;
+}
+.auth-toggle span:hover {
+  text-decoration: underline;
+}

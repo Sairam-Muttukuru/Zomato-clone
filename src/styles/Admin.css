@@ -1,0 +1,306 @@
+/* .cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 20px;
+  background:  rgba(141, 139, 139, 0.137);
+  width: 100%;
+  height: 300px;
+  overflow-x: auto;
+  margin-bottom: 6rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.insp{
+    position: relative;
+  top:3rem;
+  left: 3rem;
+   font-family: poppins,sans-serif;
+  font-size: 35px;
+} */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+body{
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+}
+.cards-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
+  /* gap: 3rem;
+  row-gap: 2rem; */
+  /* column-gap: 60px;
+  position: relative;
+  bottom: 80px;
+  padding: 20px;
+  color: black; */
+  /* background: whitesmoke; */
+  background: transparent;
+  width: auto;
+  border-radius: 20px;
+  height: 300px;
+  overflow-x:scroll;
+  margin-bottom: 8rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  margin-left: 6.5rem;
+  margin-top: 3rem;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.cards-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  
+}
+.scroll-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn.left {
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  left: 10px;
+  position: relative;
+  top: 12rem;
+  
+}
+#slash{
+  font-size: 29px;
+  position: relative;
+  top: 0.1rem;
+}
+.scroll-btn.right {
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  right: 10px;
+  position: relative;
+  left: 89rem;
+  top: 5rem;
+  /* transform: translateY(200%); */
+}
+.insp {
+  position: relative;
+  left:8rem;
+  bottom: 1.5rem;
+  font-family: Poppins, sans-serif;
+  font-size: 35px;
+  top: 1rem;
+  color: black;
+}
+.lo-pg{
+  display: block;
+  z-index: 3;
+}
+.gentle-btns {
+  background: linear-gradient(135deg, #E23744, #ff6f61);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px; /* pill button */
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(226, 55, 68, 0.3);
+  position: relative;
+  left: 1rem;
+  border-radius:10px;
+}
+.gentle-btns:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(247, 67, 82, 0.5);
+}
+.restaurant-heading {
+  font-family: 'Poppins', sans-serif; /* Try also Montserrat or Pacifico */
+  font-size: 2.2rem;
+  font-weight: 600;
+   color:#e23744;/* Zomato Red */
+  margin: 2rem 0 1rem 0;
+  text-align: left;
+  position: relative;
+  bottom: 170px;
+  left: 80px;
+  margin-left: 1.5rem;
+}
+
+.restaurant-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #e23744;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+.foodlist-title{
+  position: relative;
+  left: 150px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  bottom: 2rem;
+  color:  #e23744;
+  transform: translate(-100px,2px);
+}
+.foodlist-title img{
+  width: 90px;
+  height: 90px;
+  position: relative;
+  transform: translate(-80px,7px);
+  margin-right: 10px;
+}
+.explore-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.explore-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #e23744;
+  margin-bottom: 8px;
+  font-family: poppins,sans-serif;
+  margin-left: 2rem;
+  transform: translate(60px,2px);
+}
+
+.explore-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+.edit-bn{
+  position: relative;
+  left: 2.7rem;
+  bottom: 7rem;
+  background: #e23744;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px; /* pill button */
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(226, 55, 68, 0.3);
+
+}
+.explore-card {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-10px);
+}
+
+.explore-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.explore-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.explore-card:hover .explore-img img {
+  transform: scale(1.15);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.explore-card:hover .overlay {
+  opacity: 1;
+}
+
+.explore-name {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+.explore-name:hover {
+  color: #e23744;
+}
+.explore-subtitle:hover {
+  color: #e23744;
+}
+.explore-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-top: 6px;
+}
+.restaurant-wrapper{
+  margin-left: 2.3rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  column-gap: 1px;
+  background: transparent;
+  width: auto;
+  border-radius: 20px;
+  height: auto;
+  overflow-x:scroll;
+  margin-bottom: 8rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* border: 1px solid red; */
+
+}

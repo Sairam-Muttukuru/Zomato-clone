@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Subtle pulse on cart icon when item added */
+@keyframes cartPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#cart-icon.cart-pulse {
+    animation: cartPulse 0.6s ease-in-out;
+}
+
+/* Respect user reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+    #cart-icon.cart-pulse {
+        animation: none;
+    }
+}
+
+.logo-img {
+    width: 150px;
+    height: 30px;
+}
+
+#cart-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 25px !important;
+    position: relative;
+    left: 0;
+    /* normalized so it aligns within the right controls */
+    bottom: 0;
+    outline: none;
+    border: 1px solid #e23744;
+    /* brand outline */
+    background-color: #ffffff;
+    /* strong contrast */
+    color: #e23744;
+    /* brand color icon */
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    z-index: 10;
+    /* ensure it's above any overlaps */
+    transform: translate(2rem, 0.8rem) !important;
+}
+
+.login-button,
+.signup-button {
+    cursor: pointer;
+}
+
+#cart-icon:hover {
+    background: rgba(226, 55, 68, 0.06);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+}
+
+#cart-icon:active {
+    transform: scale(0.96);
+}
+
+/* Cart count badge */
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #e23744;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 2px 6px;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    min-width: 18px;
+    text-align: center;
+    border: 2px solid #ffffff;
+}
+
+.input-bar {
+    position: absolute;
+    padding: 0px;
+    left: 5%;
+    top: 15px;
+    transform: translate(0%, -65%);
+    width: 60%;
+    border: none;
+    font-family: poppins, sans-serif;
+    font-size: 15px;
+    transform: translate(5%, -10%);
+}
+
+.input-bar:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.input-container {
+    position: relative;
+    left: 300px;
+    top: 10px;
+    height: 50px;
+    border: 1px solid black;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 6px 0;
+    max-height: 340px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    height: 100px;
+}
+
+.search-item:hover {
+    background: #fafafa;
+}
+
+.search-item.active {
+    background: #f3f4f6;
+}
+
+.search-empty {
+    padding: 12px;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    color: #777;
+}
+
+.search-thumb {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #eee;
+    flex: 0 0 44px;
+    transform: translate(-60px, 0px);
+}
+
+.search-meta {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.search-name {
+    font-family: Poppins, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-sub {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search-name,
+.search-sub {
+    margin-left: 10rem;
+}
+
+.h2 {
+    border: 1px solid black;
+    width: 70rem;
+    margin-left: 3.5rem;
+    height: 150px;
+    position: relative;
+    left: 40px;
+    border: none;
+    position: sticky;
+    z-index: 1;
+}
+
+#lo-pg {
+    z-index: 1;
+}
+
+.veg-btn {
+    position: absolute;
+    left: 150px;
+    bottom: 29%;
+    text-align: center;
+}
+
+.veg-btn:hover,
+.filter-btn:hover {
+
+    box-shadow: 0px 2px 4px 5px rgba(96, 94, 94, 0.121);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+p span {
+    font-family: poppins, 'san-serif';
+    padding: 4px;
+    color: grey;
+}
+
+.home:hover,
+.india:hover,
+.nellore:hover {
+    color: red;
+}
+
+.filter-btn {
+    padding: 10px;
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    margin-top: 33px;
+    border: 10px;
+    margin-left: 40px;
+    padding: 4px;
+    width: 100px;
+    height: 50px;
+    color: grey;
+    border: 1px solid grey;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.veg-btn {
+    padding: 10px;
+    font-family: poppins, sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+    border: 10px;
+    margin-left: 20px;
+    padding: 4px;
+    width: 100px;
+    height: 50px;
+    color: grey;
+    border: 1px solid grey;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.filter-btn:focus,
+.veg-btn:focus {
+    background: grey;
+    color: white;
+}
+
+.filter-logo {
+    height: 40px;
+    width: 25px;
+    bottom: 2px;
+    margin-right: 2px;
+}
+
+.user-avatar {
+    position: relative;
+    background-color: wheat !important;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    transform: translate(-6.25rem, -1.3rem);
+}
+
+.controls-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 32px;
+}
+
+/* Active state for veg filter */
+.veg-btn.active {
+    background: #e6f7ec;
+    color: #0b7a34;
+    border-color: #0b7a34;
+    font-weight: 600;
+}
+
+.search-icon {
+    position: relative;
+    padding: 10px;
+    height: 40px;
+    width: 25px;
+    bottom: 5px;
+}
+
+.header {
+    position: sticky;
+    top: 3rem;
+    top: 0;
+    /* z-index: 3000; Keep header and its dropdown above page content */
+    background: #ffffff;
+    /* Solid background to mask content underneath */
+}
+
+.login-container {
+    position: absolute;
+    /* anchor to header */
+    right: 24px;
+    top: 15px;
+    border: none;
+    width: auto;
+    /* allow enough width for Admin, Dashboard, name, and Logout */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* give more breathing room so buttons don't collide */
+    white-space: nowrap;
+    /* keep on one line */
+    z-index: 10;
+    /* ensure it's above any overlaps */
+}
+
+.logout-button {
+    border: 1px solid #e23744;
+    background: #ffffff;
+    color: #e23744;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+    background: #e23744;
+    color: #ffffff;
+    box-shadow: 0 8px 16px rgba(226, 55, 68, 0.25);
+}
+
+.logout-button:focus {
+    outline: 3px solid rgba(226, 55, 68, 0.25);
+}
+
+.user-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px 6px 6px;
+    border-radius: 999px;
+    background: #f7f8fa;
+    border: 1px solid #eceef2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    color: #1f2937;
+}
+
+.user-chip:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Colorful avatar + name/email styling */
+.user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, #e23744 0%, #ff7a59 100%);
+    box-shadow: 0 4px 10px rgba(226, 55, 68, 0.25);
+}
+
+.user-name {
+    font-weight: 700;
+    color: #111827;
+}
+
+.user-email {
+    margin-left: 4px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Keep layout tidy on narrower screens */
+@media (max-width: 1200px) {
+    .user-email {
+        display: none;
+    }
+}
+
+.login-button {
+    border: none;
+    color: rgb(0, 0, 0) !important;
+    font-family: poppins, sans-serif;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgb(237, 118, 118) !important;
+    border-radius: 10px;
+}
+
+.login-button,
+.signup-button {
+    box-shadow: 5px 5px 15px rgba(192, 192, 192, 0.459);
+    color: white !important;
+    background: rgb(237, 118, 118) !important;
+    box-shadow: none;
+    transform: translate(-3rem, -1.8rem);
+}
+
+.login-button:hover,
+.signup-button:hover {
+    color: tomato;
+    border: 1px solid tomato;
+    transition: all 0.5s ease;
+}
+
+.login-button:focus,
+.signup-button:focus {
+    border: 1px solid red;
+}
+
+.signup-button {
+    border: none;
+    font-family: poppins, sans-serif;
+    color: rgba(0, 0, 0, 0.397);
+    padding: 10px;
+    background: white;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.home-para {
+    margin-left: 2.5rem;
+}
+
+.loc {
+    position: relative;
+    right: 3.5rem;
+}

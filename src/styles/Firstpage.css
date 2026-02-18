@@ -1,0 +1,110 @@
+/* .cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 20px;
+  background:  rgba(141, 139, 139, 0.137);
+  width: 100%;
+  height: 300px;
+  overflow-x: auto;
+  margin-bottom: 6rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.insp{
+    position: relative;
+  top:3rem;
+  left: 3rem;
+   font-family: poppins,sans-serif;
+  font-size: 35px;
+} */
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+body{
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  /* flex-direction: row; */
+  /* gap: 3rem;
+  row-gap: 2rem; */
+  column-gap: 60px;
+  position: relative;
+  bottom: 80px;
+  padding: 20px;
+  color: black;
+  /* background: whitesmoke; */
+  background: transparent;
+  width: auto;
+  border-radius: 20px;
+  height: 300px;
+  overflow-x: auto;
+  margin-bottom: 8rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  margin-left: 5rem;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.cards-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+.scroll-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+.scroll-btn.left {
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  left: 10px;
+  position: relative;
+  top: 9rem;
+  
+}
+.scroll-btn.right {
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  right: 10px;
+  transform: translateY(120%);
+}
+.insp {
+  position: relative;
+  left:8rem;
+  bottom: 1.5rem;
+  font-family: Poppins, sans-serif;
+  font-size: 35px;
+  top: 1rem;
+  color: black;
+}
+.lo-pg{
+  display: block;
+  z-index: 3;
+}
